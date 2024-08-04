@@ -6,5 +6,5 @@
 - [05.行为序列](/docs/5.行为序列.md)
 - [06.重排](/docs/6.重排.md)
 - [07.物品冷启动](/docs/7.物品冷启动.md)
-- [test](/docs//rec/王树森推荐系统.html)
-- - [test](/docs/rec/2.召回/2.召回.html)
+- [test0](/docs/rec/王树森推荐系统.html)
+- [test1](/docs/rec/2.召回/2.召回.html)
