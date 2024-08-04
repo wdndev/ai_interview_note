@@ -94,7 +94,7 @@ RAG的迭代升级，主要分三个阶段，分别是原始RAG、高级RAG、�
 - 递归检索在文中的概念，其实是把索引文段和返回文段进行分拆，计算相似度的时候是query和小片段，但是返回的是大片段，用大片段给大模型做检索增强。
 - stepback prompt是一种prompt工程方案，通过诱导让大模型逐步探索出方案，具体可以参考这个：[LangChain的Step-Back Prompt Engineering的实现](https://zhuanlan.zhihu.com/p/664396592 "LangChain的Step-Back Prompt Engineering的实现") ，当然了，这其实代表的是prompt工程方案了，这里能探索出很多不同的优化方案。
 - 论文中提到的子查询（subquery），其实是传统搜索领域的词了，在这里面有一些类似“检索语法树”的概念，例如可以用“should”、“must”、“filter”之类的检索策略来约束整个检索，使之更加精准可控，这个是能提升检索的效果的。
-- HyDE方案是指，**让大模型对query先生成一个答案，这个答案允许是错的，但里面的关键词基本不会差异很大**，在这个假设下，对答案做embedding相比对原query能更接近索引中的doc的embedding，此时对检索难度是有很大程度的下降。这里所代表的，或者说更抽象的，是通过query拓展的手段让检索query和doc拉到更接近的语义空间的思想，之前有写的query2doc也是这个思想（[前沿重器\[38\] | 微软新文query2doc：用大模型做query检索拓展](http://mp.weixin.qq.com/s?__biz=MzIzMzYwNzY2NQ==\&mid=2247489295\&idx=1\&sn=fcb269e47dc27fcaf31201aa1c75dafb\&chksm=e8824f91dff5c687a3a95d18490c8d2ba9b18d1b7cd5bc614e01ef3d7dd6d72aa62bcc0c2b0d\&scene=21#wechat_redirect "前沿重器\[38] | 微软新文query2doc：用大模型做query检索拓展")），实践起来非常容易而且效果明显。
+- HyDE方案是指，**让大模型对query先生成一个答案，这个答案允许是错的，但里面的关键词基本不会差异很大**，在这个假设下，对答案做embedding相比对原query能更接近索引中的doc的embedding，此时对检索难度是有很大程度的下降。这里所代表的，或者说更抽象的，是通过query拓展的手段让检索query和doc拉到更接近的语义空间的思想，实践起来非常容易而且效果明显。
 
 ### 2.3 Modular RAG
 
@@ -138,7 +138,7 @@ RAG本就是一个高度组织性的项目，在迭代过程中，是需要对�
 
 向量化的视角，所谓的向量化，就是把一段文本映射到对应的一个语义空间上，如果两个文本在语义接近，则在语义空间上的位置也必然是接近的，但可以明确的是，**query和doc其实本身的语义其实并不是相似，只是相关，这是两者的鸿沟，所需要做的，就是要通过两者的改写、归一让他们尽可能更好地能匹配起来。**
 
-**Query侧，更多的就是做改写**，仍旧举例之前的query2doc（[前沿重器\[38\] | 微软新文query2doc：用大模型做query检索拓展](http://mp.weixin.qq.com/s?__biz=MzIzMzYwNzY2NQ==\&mid=2247489295\&idx=1\&sn=fcb269e47dc27fcaf31201aa1c75dafb\&chksm=e8824f91dff5c687a3a95d18490c8d2ba9b18d1b7cd5bc614e01ef3d7dd6d72aa62bcc0c2b0d\&scene=21#wechat_redirect "前沿重器\[38] | 微软新文query2doc：用大模型做query检索拓展")），就是在query侧，从query拓展出更多和doc匹配的信息，而doc侧，也可以通过特征抽取、问题挖掘等方式来让doc和query更接近。文章此处只提了query改写，此处个人认为工作不能只局限在query侧，在doc侧也可以做一些专项的转化。
+**Query侧，更多的就是做改写**，从query拓展出更多和doc匹配的信息，而doc侧，也可以通过特征抽取、问题挖掘等方式来让doc和query更接近。文章此处只提了query改写，此处个人认为工作不能只局限在query侧，在doc侧也可以做一些专项的转化。
 
 embedding训练是另一个思路，前面也多少有些提及了，就是优化模型了，这里提出了一些专项的方法，例如对比学习、围绕实体进行的mask等策略。
 
