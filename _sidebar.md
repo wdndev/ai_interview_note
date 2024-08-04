@@ -21,3 +21,6 @@
   - [3.query理解](docs/dialogue/3.query理解.md)
   - [4.内容输出](docs/dialogue/4.内容输出.md)
   - [5.多轮对话](docs/dialogue/5.多轮对话.md)
+- [RAG](docs/rag/README.md)
+  - [综述-面向大模型的检索增强生成](docs/rag/综述-面向大模型的检索增强生成（RAG）.md)
+
