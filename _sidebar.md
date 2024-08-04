@@ -15,4 +15,9 @@
   - [5.召回：检索、粗排、多路召回](docs/search/5.召回：检索、粗排、多路召回.md)
   - [6.精排](docs/search/6.精排.md)
   - [7.补充模块](docs/search/7.补充模块.md)
-- 
+- [对话系统](docs/dialogue/README.md)
+  - [1.概述](docs/dialogue/1.概述.md)
+  - [2.技术架构](docs/dialogue/2.技术架构.md)
+  - [3.query理解](docs/dialogue/3.query理解.md)
+  - [4.内容输出](docs/dialogue/4.内容输出.md)
+  - [5.多轮对话](docs/dialogue/5.多轮对话.md)
