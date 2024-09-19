@@ -1,8 +1,8 @@
 # 搜索系统
 
 > 文章摘自：
-> \- 作者：叉烧
-> \- 链接：[四万字聊搜索系统](https://mp.weixin.qq.com/s/QhehI1WFCJ6R-5yAatFSFQ "四万字聊搜索系统")
+> - 作者：叉烧
+> - 链接：[四万字聊搜索系统](https://mp.weixin.qq.com/s/QhehI1WFCJ6R-5yAatFSFQ "四万字聊搜索系统")
 
 ### 简介
 

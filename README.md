@@ -7,7 +7,7 @@
 
 ## 2.在线阅读
 
-在线阅读链接：[AI SeaInterview Noterch](https://dongnian.icu/ai_interview_note)
+在线阅读链接：[AI Interview Note](https://dongnian.icu/ai_interview_note)
 
 ## 3.目录
 
@@ -28,4 +28,5 @@
   - [6.精排](docs/search/6.精排.md)
   - [7.补充模块](docs/search/7.补充模块.md)
 - [RAG](docs/rag/README.md)
+  - [RAG 综述](docs/rag/综述-面向大模型的检索增强生成（RAG）.md)
 
