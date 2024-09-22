@@ -19,6 +19,7 @@
   - [4.损失函数](docs/dl/4.损失函数.md)
   - [5.优化器](docs/dl/5.优化器.md)
   - [6.评估指标](docs/dl/6.评估指标.md)
+- [机器学习](docs/ml/README.md)
 - [推荐系统](docs/rec/README.md)
   - [1.概要](/docs/rec/1.概要.md)
   - [2.召回](/docs/rec/2.召回.md)
