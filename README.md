@@ -22,7 +22,7 @@
 - [机器学习](docs/ml/README.md)
   - [](docs/ml)
   - [2.LR模型](docs/ml/2.LR模型.md)
-  - [/3.SVM](docs/ml/3.SVM.md)
+  - [3.SVM](docs/ml/3.SVM.md)
   - [](docs/ml)
 - [推荐系统](docs/rec/README.md)
   - [1.概要](/docs/rec/1.概要.md)
