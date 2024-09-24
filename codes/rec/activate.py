@@ -2,14 +2,14 @@ from torch import nn
 import torch
 
 class Dice(nn.Module):
-    """The Data Adaptive Activation Function in DIN,which can be viewed as a generalization of PReLu and can adaptively adjust the rectified point according to distribution of input data.
+    """ DIN中的数组自适应激活函数，可以看作是PReLU的一种泛化，并且可以根据输入数据的分布自适应的调整修正点
 
     Input shape:
         - 2 dims: [batch_size, embedding_size(features)]
         - 3 dims: [batch_size, num_features, embedding_size(features)]
 
     Output shape:
-        - Same shape as input.
+        - 与输入维度相同.
 
     参考文献
         - [Zhou G, Zhu X, Song C, et al. Deep interest network for click-through rate prediction[C]//Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. ACM, 2018: 1059-1068.](https://arxiv.org/pdf/1706.06978.pdf)
@@ -24,7 +24,7 @@ class Dice(nn.Module):
         self.sigmoid = nn.Sigmoid()
         self.dim = dim
 
-        # wrap alpha in nn.Parameter to make it trainable
+        # 将alpha包装成nn.Parameter以便训练
         if self.dim == 2:
             self.alpha = nn.Parameter(torch.zeros((emb_size,)).to(device))
         else:
